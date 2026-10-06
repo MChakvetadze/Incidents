@@ -1,0 +1,5 @@
+ID,name,slaDays
+LOW,Low,10
+MEDIUM,Medium,5
+HIGH,High,3
+CRITICAL,Critical,1

@@ -17,18 +17,19 @@ entity Incidents : cuid, managed {
     virtual criticality    : Integer;
     virtual slaStatus      : String(30);
 }
-
+@cds.odata.valuelist
 entity Statuses {
     key ID : String(20);
     name   : String(50);
 }
-
+@cds.odata.valuelist
 entity Urgencies {
     key ID  : String(20);
     name    : String(50);
     slaDays : Integer;
 }
 
+@cds.odata.valuelist
 entity Responsibles {
     key ID : String(20);
     name   : String(100);

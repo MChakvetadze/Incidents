@@ -11,6 +11,13 @@ annotate service.Incidents with {
     slaStatus       @title : 'SLA Status';
 };
 
+annotate service.Incidents with {
+    status  @Common.ValueListWithFixedValues : true;
+    urgency @Common.ValueListWithFixedValues : true;
+    responsible @Common.ValueListWithFixedValues : true;
+};
+
+
 annotate service.Incidents with @(
 
     UI.HeaderInfo : {
@@ -21,7 +28,7 @@ annotate service.Incidents with @(
     },
 
     UI.SelectionFields : [
-        status_ID,
+        status.name,
         urgency_ID,
         responsible_ID,
         targetDate
@@ -33,11 +40,11 @@ UI.LineItem : [
         Label : 'Incident'
     },
     {
-        Value : status_ID,
+        Value : status.name,
         Label : 'Status'
     },
     {
-        Value : urgency_ID,
+        Value : urgency.name,
         Label : 'Urgency'
     },
     {
