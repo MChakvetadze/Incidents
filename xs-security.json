@@ -1,0 +1,31 @@
+{
+  "xsappname": "Incidents",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.admin",
+      "description": "Admin access"
+    },
+    {
+      "name": "$XSAPPNAME.support",
+      "description": "Support access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "admin",
+      "description": "Full access",
+      "scope-references": [
+        "$XSAPPNAME.admin"
+      ]
+    },
+    {
+      "name": "support",
+      "description": "Read/create access",
+      "scope-references": [
+        "$XSAPPNAME.support"
+      ]
+    }
+  ],
+  "attributes": []
+}
