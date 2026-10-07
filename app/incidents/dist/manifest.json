@@ -35,7 +35,7 @@
 				"incident-Manage": {
 					"semanticObject": "incident",
 					"action": "Manage",
-					"title": "{{incident-Manage.flpTitle}}",
+					"title": "Incidents",
 					"signature": {
 						"parameters": {},
 						"additionalParameters": "allowed"
